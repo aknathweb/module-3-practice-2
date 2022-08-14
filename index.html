@@ -5,9 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Panda Commerce | Bootstrap</title>
+    <!-- link with bootstrap css start -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- link with bootstrap css end -->
+    <!-- set favicon start  -->
     <link rel="shortcut icon" href="images/icon panda.png" type="image/x-icon">
+    <!-- set favicon start -->
+    <!-- Internal CSS start -->
     <style>
         /* fixed the categories image size */
         .categories img {
@@ -28,13 +33,16 @@
             padding: 9px 25px;
         }
     </style>
+    <!-- Internal CSS end -->
 </head>
 
 <body>
     <header class="container">
+        <!-- navbar start  -->
         <nav class="navbar navbar-expand-lg fixed-top bg-light">
             <div class="container">
                 <a class="navbar-brand" href="#">
+                    <!-- navbar logo  -->
                     <img src="images/logo.png" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -48,20 +56,25 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
+                            <!-- href="#shoes" for link with shoes section  -->
                             <a class="nav-link" href="#shoes">Shoes</a>
                         </li>
                         <li class="nav-item">
+                            <!-- href="#backpack" for link with shoes section  -->
                             <a class="nav-link" href="#backpack">Backpack</a>
                         </li>
                         <li class="nav-item">
+                            <!-- href="#subscribe" for link with shoes section  -->
                             <a class="nav-link" href="#subscribe">Subscribe</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <!-- slider start -->
-        <section class="mt-5">
+        <!-- navber end  -->
+
+        <section>
+            <!-- slider (carousel) start -->
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active border rounded panda-bg-info p-5">
@@ -125,14 +138,17 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+            <!-- slider (carousel) end -->
         </section>
-        <!-- slider end -->
+
     </header>
     <main>
         <!-- categories start -->
         <section>
             <div class="container text-center my-5">
+                <!-- take row and take column in row  -->
                 <div class="row g-4 categories justify-content-around">
+                    <!-- separate rows column out of 12 -->
                     <!-- single category -->
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="p-3 border bg-warning rounded-3 d-flex align-items-center justify-content-around">
@@ -161,7 +177,9 @@
         <!-- shoes section start -->
         <section class="container my-5" id="shoes">
             <h2>Shoes</h2>
+            <!-- separate  rows_column_1(small),rows_column_2(medium),rows_column_3(large) -->
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-around">
+                <!-- single shoes  -->
                 <div class="col">
                     <div class="card border border-0 shadow-lg h-100">
                         <img src="images/shoes/shoe-1.png" class="card-img-top" alt="...">
@@ -176,6 +194,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- single shoes  -->
                 <div class="col">
                     <div class="card border border-0 shadow-lg h-100">
                         <img src="images/shoes/shoe-2.png" class="card-img-top" alt="...">
@@ -190,6 +209,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- single shoes  -->
                 <div class="col">
                     <div class="card border border-0 shadow-lg h-100">
                         <img src="images/shoes/shoe-3.png" class="card-img-top" alt="...">
@@ -211,7 +231,9 @@
         <!-- Backpack Section Start -->
         <section class="container my-5" id="backpack">
             <h2>Backpack</h2>
+            <!-- separate  rows_column_1(small),rows_column_2(medium),rows_column_3(large) -->
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-around">
+                <!-- single bag -->
                 <div class="col">
                     <div class="card border border-0 shadow-lg h-100">
                         <img src="images/bags/bag-1.png" class="card-img-top" alt="...">
@@ -226,6 +248,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- single bag -->
                 <div class="col">
                     <div class="card border border-0 shadow-lg h-100">
                         <img src="images/bags/bag-2.png" class="card-img-top" alt="...">
@@ -240,6 +263,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- single bag -->
                 <div class="col">
                     <div class="card border border-0 shadow-lg h-100">
                         <img src="images/bags/bag-3.png" class="card-img-top" alt="...">
@@ -283,3 +307,13 @@
 </body>
 
 </html>
+
+<!-- full structure like
+
+1. [header] navbar {pasition fixed}
+2. [header] carousel {Inside: row > (col-lg-7)and (col-lg-5)}
+3. [main] (categories) container > row > (col-lg-4 col-md-6 col-sm-12)*3
+4. [main] (shoes) container > (row) and (row-cols-1 row-cols-md-2 row-cols-lg-3) > (col)*3
+5. [main] (Backpack) container > (row) and (row-cols-1 row-cols-md-2 row-cols-lg-3) > (col)*3
+6. [main] (Subscribe) container
+7. [footer] -->
